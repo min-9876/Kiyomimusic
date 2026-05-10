@@ -1110,4 +1110,42 @@ async def autoplay_off(chat_id: int):
         {"chat_id": chat_id},
         {"$set": {"enabled": False}},
         upsert=True
-         )
+    )
+
+
+async def set_autoplay_status(chat_id: int, status: bool):
+    """Set autoplay status for a chat"""
+    if status:
+        await autoplay_on(chat_id)
+    else:
+        await autoplay_off(chat_id)
+
+
+async def get_autoplay_mood(chat_id: int) -> str:
+    """Get the saved mood preference for autoplay"""
+    data = await autoplaydb.find_one({"chat_id": chat_id})
+    return data.get("mood", "Happy") if data else "Happy"
+
+
+async def set_autoplay_mood(chat_id: int, mood: str):
+    """Set the mood preference for autoplay"""
+    await autoplaydb.update_one(
+        {"chat_id": chat_id},
+        {"$set": {"mood": mood}},
+        upsert=True
+    )
+
+
+async def get_autoplay_language(chat_id: int) -> str:
+    """Get the saved language preference for autoplay"""
+    data = await autoplaydb.find_one({"chat_id": chat_id})
+    return data.get("language", "English") if data else "English"
+
+
+async def set_autoplay_language(chat_id: int, language: str):
+    """Set the language preference for autoplay"""
+    await autoplaydb.update_one(
+        {"chat_id": chat_id},
+        {"$set": {"language": language}},
+        upsert=True
+    )
