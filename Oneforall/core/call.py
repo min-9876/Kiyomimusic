@@ -365,6 +365,7 @@ class Call(PyTgCalls):
 
                             file_path, direct = await YouTube.download(
                                 track_id,
+                                None,
                                 videoid=True,
                                 video=False,
                             )
