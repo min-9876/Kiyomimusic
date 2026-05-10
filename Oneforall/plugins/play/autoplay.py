@@ -1,9 +1,7 @@
 import random
 
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardMarkup
 
-import config
 from config import BANNED_USERS, lyrical
 from Oneforall import YouTube, app
 from Oneforall.utils.database import (
@@ -17,8 +15,6 @@ from Oneforall.utils.inline import (
     autoplay_mood_markup,
     autoplay_language_markup,
 )
-from Oneforall.misc import db
-
 
 # Store previous tracks per chat
 previous_tracks = {}
@@ -51,7 +47,6 @@ async def handle_mood_selection(client, CallbackQuery, _):
             show_alert=True,
         )
 
-    # Temporary store
     if chat_id not in lyrical:
         lyrical[chat_id] = {}
 
@@ -84,7 +79,6 @@ async def handle_language_selection(client, CallbackQuery, _):
 
     mood = lyrical[chat_id].get("autoplay_mood", "chill")
 
-    # Save settings
     await set_autoplay(chat_id, True)
 
     await set_autoplay_mood(
@@ -95,7 +89,6 @@ async def handle_language_selection(client, CallbackQuery, _):
         },
     )
 
-    # Cleanup temp cache
     lyrical[chat_id].pop("autoplay_mood", None)
 
     await CallbackQuery.edit_message_text(
@@ -137,7 +130,7 @@ async def toggle_autoplay(client, CallbackQuery, _):
     )
 
 
-async def get_autoplay_recommendation(chat_id: int, user_id: int):
+async def get_autoplay_recommendation(chat_id: int):
     """Get autoplay song recommendation"""
 
     if chat_id not in previous_tracks:
@@ -152,12 +145,17 @@ async def get_autoplay_recommendation(chat_id: int, user_id: int):
         mood = mood_data.get("mood", "chill")
         language = mood_data.get("language", "english")
 
-    query = f"{mood} {language} songs"
+    query = f"best {language} {mood} songs"
 
     try:
         track_data, track_id = await YouTube.track(query)
 
         if not track_data or not track_id:
+            return None, None
+
+        used_ids = [x["vidid"] for x in previous_tracks[chat_id]]
+
+        if track_id in used_ids:
             return None, None
 
         if len(previous_tracks[chat_id]) >= 10:
