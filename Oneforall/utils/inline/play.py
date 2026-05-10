@@ -185,7 +185,7 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
             ),
         ],
     ]
-    return buttons
+    return livestream_markup
 
 
 def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
