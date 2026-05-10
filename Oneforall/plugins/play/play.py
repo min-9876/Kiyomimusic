@@ -2,7 +2,8 @@ import random
 import string
 
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message, ChatMemberStatus
+from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
+from pyrogram.enums import ChatMemberStatus
 from pytgcalls.exceptions import NoActiveGroupCall
 
 from Oneforall.utils.inline import (
