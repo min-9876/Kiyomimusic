@@ -415,6 +415,7 @@ class Call(PyTgCalls):
                             )  
 
                             db[chat_id][0]["mystic"] = run
+                             
                           except:
                             pass
 
