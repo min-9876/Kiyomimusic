@@ -416,12 +416,12 @@ class Call(PyTgCalls):
 
                             db[chat_id][0]["mystic"] = run
                              
-                          except:
-                            pass
+                         except:
+                           pass
 
-                          return
-                      except Exception as e:
-                        print(f"Autoplay Error: {e}")
+                         return
+                     except Exception as e:
+                       print(f"Autoplay Error: {e}")
                 await _clear_(chat_id)
                 try:
                     buttons = InlineKeyboardMarkup(
