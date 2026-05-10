@@ -393,7 +393,6 @@ class Call(PyTgCalls):
                             )
 
                             try:
-                                img = await get_thumb(vidid)
                                 button = stream_markup(_, vidid, chat_id)
 
                                 run = await app.send_photo(
