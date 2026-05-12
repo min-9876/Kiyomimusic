@@ -11,8 +11,8 @@ from Oneforall.utils.formatters import time_to_seconds
 import aiohttp
 from Oneforall import LOGGER
 
-YOUR_API_URL = None
-FALLBACK_API_URL = "https://web-production-b37575.up.railway.app"
+YOUR_API_URL = "http://0.0.0.0:9090"
+FALLBACK_API_URL = "http://0.0.0.0:9090"
 
 async def load_api_url():
     global YOUR_API_URL
