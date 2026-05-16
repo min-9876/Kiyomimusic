@@ -7,8 +7,7 @@ from pyrogram import filters
 from pyrogram.enums import ChatAction, PollType, ParseMode
 
 from Oneforall import app
-from Oneforall.utils.mongo import mongodb  # ← mongodb from your app
-
+from Oneforall.core.mongo import mongodb
 # ⚙️ CONFIG
 CHATS_COLL = mongodb.chats
 STATS_COLL = mongodb.quiz_stats
