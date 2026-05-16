@@ -6,7 +6,8 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.enums import ChatAction, PollType, ParseMode
 
-from Oneforall import app, mongodb  # ← mongodb from your app
+from Oneforall import app
+from Oneforall.utils.mongo import mongodb  # ← mongodb from your app
 
 # ⚙️ CONFIG
 CHATS_COLL = mongodb.chats
