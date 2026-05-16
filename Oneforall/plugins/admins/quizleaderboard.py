@@ -4,8 +4,7 @@ from datetime import datetime, timedelta
 from pyrogram import filters
 from pyrogram.enums import ParseMode
 from Oneforall import app
-from Oneforall.utils.mongo import mongodb  # ← mongodb from your app
-
+from Oneforall.core.mongo import mongodb
 
 STATS_COLL = mongodb.quiz_stats
 CHATS_COLL = mongodb.chats
