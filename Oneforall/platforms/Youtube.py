@@ -12,7 +12,7 @@ import aiohttp
 from Oneforall import LOGGER
 
 YOUR_API_URL = None
-FALLBACK_API_URL = "https://vercel.com/txkuzes-projects/admin-music-hub"
+FALLBACK_API_URL = ""
 
 async def load_api_url():
     global YOUR_API_URL
@@ -20,7 +20,7 @@ async def load_api_url():
 
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get("https://pastebin.com/raw/rLsBhAQa", timeout=aiohttp.ClientTimeout(total=10)) as response:
+            async with session.get("", timeout=aiohttp.ClientTimeout(total=10)) as response:
                 if response.status == 200:
                     content = await response.text()
                     YOUR_API_URL = content.strip()
