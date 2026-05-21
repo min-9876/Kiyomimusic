@@ -114,9 +114,10 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
                 callback_data="close",
                 style=ButtonStyle.SUCCESS
             )
-        ]
+        ],
+    ]
         
-        return buttons
+    return buttons
     
 def stream_markup(_, videoid, chat_id):
     buttons = [
