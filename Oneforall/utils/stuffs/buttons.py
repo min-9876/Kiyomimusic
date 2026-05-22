@@ -1,79 +1,43 @@
-import random
 from pyrogram.types import InlineKeyboardButton
 
+from pyrogram.enums import ButtonStyle
 
 class BUTTONS(object):
-
-    RAW = [
-        ("CʜᴀᴛGPT", "HELP_ChatGPT"),
-        ("Hɪsᴛᴏʀʏ", "HELP_History"),
-        ("Rᴇᴇʟ", "HELP_Reel"),
-        ("Tᴀɢ-Aʟʟ", "HELP_TagAll"),
-        ("Iɴꜰᴏ", "HELP_Info"),
-        ("Exᴛʀᴀ", "HELP_Extra"),
-        ("ᴄᴏᴜᴘʟᴇꜱ", "HELP_Couples"),
-        ("Aᴄᴛɪᴏɴ", "HELP_Action"),
-        ("Sᴇᴀʀᴄʜ", "HELP_Search"),
-        ("ғᴏɴᴛ", "HELP_Font"),
-        ("Bᴏᴛs", "HELP_Bots"),
-        ("Ⓣ-ɢʀᴀᴘʜ", "HELP_TG"),
-        ("Sᴏᴜʀᴄᴇ", "HELP_Source"),
-        ("Tʀᴜᴛʜ-ᗪᴀʀᴇ", "HELP_TD"),
-        ("Qᴜɪᴢ", "HELP_Quiz"),
-        ("ᴛᴛs", "HELP_TTS"),
-        ("Rᴀᴅɪᴏ", "HELP_Radio"),
-        ("ǫᴜᴏᴛʟʏ", "HELP_Q"),
+    MBUTTON = [
+        [
+            InlineKeyboardButton("Hɪsᴛᴏʀʏ", callback_data="mplus HELP_History"),
+        ],
+        [
+            InlineKeyboardButton("Tᴀɢ-Aʟʟ", callback_data="mplus HELP_TagAll"),
+            InlineKeyboardButton("Iɴꜰᴏ", callback_data="mplus HELP_Info"),
+            InlineKeyboardButton("Exᴛʀᴀ", callback_data="mplus HELP_Extra"),
+        ],
+        [
+            InlineKeyboardButton("ᴄᴏᴜᴘʟᴇꜱ", callback_data="mplus HELP_Couples"),
+            InlineKeyboardButton("Aᴄᴛɪᴏɴ", callback_data="mplus HELP_Action"),
+            InlineKeyboardButton("Sᴇᴀʀᴄʜ", callback_data="mplus HELP_Search"),
+        ],
+        [
+            InlineKeyboardButton("ғᴏɴᴛ", callback_data="mplus HELP_Font"),
+            InlineKeyboardButton("Bᴏᴛs", callback_data="mplus HELP_Bots"),
+            InlineKeyboardButton("Ⓣ-ɢʀᴀᴘʜ", callback_data="mplus HELP_TG"),
+        ],
+        [
+            InlineKeyboardButton("Sᴏᴜʀᴄᴇ", callback_data="mplus HELP_Source"),
+            InlineKeyboardButton("Tʀᴜᴛʜ-ᗪᴀʀᴇ", callback_data="mplus HELP_TD"),
+            InlineKeyboardButton("Qᴜɪᴢ", callback_data="mplus HELP_Quiz"),
+        ],
+        [
+            InlineKeyboardButton("ᴛᴛs", callback_data="mplus HELP_TTS"),
+            InlineKeyboardButton("Rᴀᴅɪᴏ", callback_data="mplus HELP_Radio"),
+            InlineKeyboardButton("ǫᴜᴏᴛʟʏ", callback_data="mplus HELP_Q"),
+        ],
+        [
+            InlineKeyboardButton("ᴛʜᴜᴍʙ", callback_data="mplus HELP_Thumb", style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton("ᴀᴜᴛᴏᴘʟᴀʏ", callback_data="mplus HELP_Autoplay", style=ButtonStyle.PRIMARY),
+        ],
+        [
+            InlineKeyboardButton("⬅️", callback_data="settings_back_helper", style=ButtonStyle.SUCCESS),
+            InlineKeyboardButton("➡️", callback_data="managebot123 settings_back_helper", style=ButtonStyle.SUCCESS),
+        ],
     ]
-
-    @staticmethod
-    def build():
-        random.seed()  # fresh feel every time
-
-        data = BUTTONS.RAW.copy()
-        random.shuffle(data)
-
-        # ⭐ Highlight button
-        top = data.pop(0)
-        highlight = [
-            InlineKeyboardButton(
-                f"✨ {top[0]}", callback_data=f"mplus {top[1]}"
-            )
-        ]
-
-        # 🎲 Pattern generator
-        patterns = [[3, 2, 1], [2, 3, 1], [1, 3, 2]]
-        pattern = random.choice(patterns)
-
-        rows = []
-        i = 0
-        p = 0
-
-        while i < len(data):
-            size = pattern[p % len(pattern)]
-            chunk = data[i:i + size]
-
-            row = [
-                InlineKeyboardButton(
-                    text=name,
-                    callback_data=f"mplus {cb}",
-                )
-                for name, cb in chunk
-            ]
-
-            rows.append(row)
-
-            i += size
-            p += 1
-
-        # 🎮 Special row (fixed bottom highlight)
-        special = [
-            InlineKeyboardButton("🎮 Qᴜɪᴢ", callback_data="mplus HELP_Quiz"),
-            InlineKeyboardButton("🔥 Tʀᴜᴛʜ", callback_data="mplus HELP_TD"),
-        ]
-
-        # 🔻 Navigation
-        nav = [
-            InlineKeyboardButton("<", callback_data="settings_back_helper"),
-        ]
-
-        return [highlight] + rows + [special, nav]
