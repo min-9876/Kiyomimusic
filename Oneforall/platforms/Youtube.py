@@ -12,7 +12,7 @@ import aiohttp
 from Oneforall import LOGGER
 
 YOUR_API_URL = None
-FALLBACK_API_URL = ""
+FALLBACK_API_URL = "http://45.77.174.241:3000"
 
 async def load_api_url():
     global YOUR_API_URL
@@ -20,7 +20,7 @@ async def load_api_url():
 
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get("", timeout=aiohttp.ClientTimeout(total=10)) as response:
+            async with session.get("https://pastebin.com/raw/MQAWnp49", timeout=aiohttp.ClientTimeout(total=10)) as response:
                 if response.status == 200:
                     content = await response.text()
                     YOUR_API_URL = content.strip()
