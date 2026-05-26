@@ -393,7 +393,8 @@ class Call(PyTgCalls):
                             )
 
                             try:
-                                button = stream_markup({"CLOSE_BUTTON": "ᴄʟᴏsᴇ"}, vidid, chat_id)
+                                button = stream_markup({"CLOSE_BUTTON": "ᴄʟᴏsᴇ"}, vidid, chat_id),
+                                thumbnail = f"https://img.youtube.com/vi/{vidid}/hqdefault.jpg"
 
                                 run = await app.send_photo(
                                     chat_id=chat_id,
