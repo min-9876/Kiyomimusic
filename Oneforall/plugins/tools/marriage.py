@@ -7,7 +7,7 @@ from pyrogram.types import (
 )
 from datetime import datetime
 from Oneforall import app
-from Oneforall.utils.database import db
+from Oneforall.utils.mongo import db
 
 # ─── DATABASE KEYS ───
 MARRIAGE_DB = "MARRIAGE_DATA"
