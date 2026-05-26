@@ -63,14 +63,11 @@ FULL_PERMISSIONS = ChatPermissions(
     can_send_other_messages=True,
     can_add_web_page_previews=True,
     can_change_info=True,
-    can_delete_messages=True,
-    can_edit_messages=True,
-    can_restrict_members=True,
-    can_promote_members=True,
     can_invite_users=True,
     can_pin_messages=True,
     can_manage_topics=True,
     can_manage_video_chats=True,
+    can_promote_members=True,
 )
 
 # ─── UTILS ───
