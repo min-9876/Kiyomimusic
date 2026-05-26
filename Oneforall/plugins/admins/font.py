@@ -5,6 +5,7 @@ from Oneforall import app
 
 
 class Fonts:
+    @staticmethod
     def typewriter(text):
         style = {
             "a": "𝚊",
@@ -22,7 +23,7 @@ class Fonts:
             "m": "𝚖",
             "n": "𝚗",
             "o": "𝚘",
-            "p": "𝚙",
+            "p": "��",
             "q": "𝚚",
             "r": "𝚛",
             "s": "𝚜",
@@ -64,6 +65,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def outline(text):
         style = {
             "a": "𝕒",
@@ -133,6 +135,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def serief(text):
         style = {
             "a": "𝐚",
@@ -202,6 +205,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def bold_cool(text):
         style = {
             "a": "𝒂",
@@ -261,6 +265,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def cool(text):
         style = {
             "a": "𝑎",
@@ -320,6 +325,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def smallcap(text):
         style = {
             "a": "ᴀ",
@@ -389,6 +395,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def script(text):
         style = {
             "a": "𝒶",
@@ -448,6 +455,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def bold_script(text):
         style = {
             "a": "𝓪",
@@ -507,6 +515,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def tiny(text):
         style = {
             "a": "ᵃ",
@@ -566,6 +575,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def comic(text):
         style = {
             "a": "ᗩ",
@@ -625,6 +635,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def san(text):
         style = {
             "a": "𝗮",
@@ -694,6 +705,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def slant_san(text):
         style = {
             "a": "𝙖",
@@ -723,7 +735,7 @@ class Fonts:
             "y": "𝙮",
             "z": "𝙯",
             "A": "𝘼",
-            "B": "𝘽",
+            "B": "���",
             "C": "𝘾",
             "D": "𝘿",
             "E": "𝙀",
@@ -753,6 +765,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def slant(text):
         style = {
             "a": "𝘢",
@@ -812,6 +825,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def sim(text):
         style = {
             "a": "𝖺",
@@ -871,6 +885,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def circles(text):
         style = {
             "a": "Ⓐ︎",
@@ -940,6 +955,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def dark_circle(text):
         style = {
             "a": "🅐︎",
@@ -1009,6 +1025,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def gothic(text):
         style = {
             "a": "𝔞",
@@ -1068,6 +1085,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def bold_gothic(text):
         style = {
             "a": "𝖆",
@@ -1127,114 +1145,116 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def cloud(text):
         style = {
-            "a": "a͜͡",
-            "b": "b͜͡",
-            "c": "c͜͡",
-            "d": "d͜͡",
-            "e": "e͜͡",
-            "f": "f͜͡",
-            "g": "g͜͡",
-            "h": "h͜͡",
-            "i": "i͜͡",
-            "j": "j͜͡",
-            "k": "k͜͡",
-            "l": "l͜͡",
-            "m": "m͜͡",
-            "n": "n͜͡",
-            "o": "o͜͡",
-            "p": "p͜͡",
-            "q": "q͜͡",
-            "r": "r͜͡",
-            "s": "s͜͡",
-            "t": "t͜͡",
-            "u": "u͜͡",
-            "v": "v͜͡",
-            "w": "w͜͡",
-            "x": "x͜͡",
-            "y": "y͜͡",
-            "z": "z͜͡",
-            "A": "A͜͡",
-            "B": "B͜͡",
-            "C": "C͜͡",
-            "D": "D͜͡",
-            "E": "E͜͡",
-            "F": "F͜͡",
-            "G": "G͜͡",
-            "H": "H͜͡",
-            "I": "I͜͡",
-            "J": "J͜͡",
-            "K": "K͜͡",
-            "L": "L͜͡",
-            "M": "M͜͡",
-            "N": "N͜͡",
-            "O": "O͜͡",
-            "P": "P͜͡",
-            "Q": "Q͜͡",
-            "R": "R͜͡",
-            "S": "S͜͡",
-            "T": "T͜͡",
-            "U": "U͜͡",
-            "V": "V͜͡",
-            "W": "W͜͡",
-            "X": "X͜͡",
-            "Y": "Y͜͡",
-            "Z": "Z͜͡",
+            "a": "a͜͡",
+            "b": "b͜͡",
+            "c": "c͜͡",
+            "d": "d͜͡",
+            "e": "e͜͡",
+            "f": "f͜͡",
+            "g": "g͜͡",
+            "h": "h͜͡",
+            "i": "i͜͡",
+            "j": "j͜͡",
+            "k": "k͜͡",
+            "l": "l͜͡",
+            "m": "m͜͡",
+            "n": "n͜͡",
+            "o": "o͜͡",
+            "p": "p͜͡",
+            "q": "q͜͡",
+            "r": "r͜͡",
+            "s": "s͜͡",
+            "t": "t͜͡",
+            "u": "u͜͡",
+            "v": "v͜͡",
+            "w": "w͜͡",
+            "x": "x͜͡",
+            "y": "y͜͡",
+            "z": "z͜͡",
+            "A": "A͜͡",
+            "B": "B͜͡",
+            "C": "C͜͡",
+            "D": "D͜͡",
+            "E": "E͜͡",
+            "F": "F͜͡",
+            "G": "G͜͡",
+            "H": "H͜͡",
+            "I": "I͜͡",
+            "J": "J͜͡",
+            "K": "K͜͡",
+            "L": "L͜͡",
+            "M": "M͜͡",
+            "N": "N͜͡",
+            "O": "O͜͡",
+            "P": "P͜͡",
+            "Q": "Q͜͡",
+            "R": "R͜͡",
+            "S": "S͜͡",
+            "T": "T͜͡",
+            "U": "U͜͡",
+            "V": "V͜͡",
+            "W": "W͜͡",
+            "X": "X͜͡",
+            "Y": "Y͜͡",
+            "Z": "Z͜͡",
         }
         for i, j in style.items():
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def happy(text):
         style = {
-            "a": "ă̈",
+            "a": "ă̈",
             "b": "b̆̈",
             "c": "c̆̈",
             "d": "d̆̈",
-            "e": "ĕ̈",
+            "e": "ĕ̈",
             "f": "f̆̈",
-            "g": "ğ̈",
+            "g": "ğ̈",
             "h": "h̆̈",
-            "i": "ĭ̈",
+            "i": "ĭ̈",
             "j": "j̆̈",
             "k": "k̆̈",
             "l": "l̆̈",
             "m": "m̆̈",
             "n": "n̆̈",
-            "o": "ŏ̈",
+            "o": "ŏ̈",
             "p": "p̆̈",
             "q": "q̆̈",
             "r": "r̆̈",
             "s": "s̆̈",
             "t": "t̆̈",
-            "u": "ŭ̈",
+            "u": "ŭ̈",
             "v": "v̆̈",
             "w": "w̆̈",
             "x": "x̆̈",
             "y": "y̆̈",
             "z": "z̆̈",
-            "A": "Ă̈",
+            "A": "Ă̈",
             "B": "B̆̈",
             "C": "C̆̈",
             "D": "D̆̈",
-            "E": "Ĕ̈",
+            "E": "Ĕ̈",
             "F": "F̆̈",
-            "G": "Ğ̈",
+            "G": "Ğ̈",
             "H": "H̆̈",
-            "I": "Ĭ̈",
+            "I": "Ĭ̈",
             "J": "J̆̈",
             "K": "K̆̈",
             "L": "L̆̈",
             "M": "M̆̈",
             "N": "N̆̈",
-            "O": "Ŏ̈",
+            "O": "Ŏ̈",
             "P": "P̆̈",
             "Q": "Q̆̈",
             "R": "R̆̈",
             "S": "S̆̈",
             "T": "T̆̈",
-            "U": "Ŭ̈",
+            "U": "Ŭ̈",
             "V": "V̆̈",
             "W": "W̆̈",
             "X": "X̆̈",
@@ -1245,55 +1265,56 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def sad(text):
         style = {
-            "a": "ȃ̈",
+            "a": "ȃ̈",
             "b": "b̑̈",
             "c": "c̑̈",
             "d": "d̑̈",
-            "e": "ȇ̈",
+            "e": "ȇ̈",
             "f": "f̑̈",
             "g": "g̑̈",
             "h": "h̑̈",
-            "i": "ȋ̈",
+            "i": "ȋ̈",
             "j": "j̑̈",
             "k": "k̑̈",
             "l": "l̑̈",
             "m": "m̑̈",
             "n": "n̑̈",
-            "o": "ȏ̈",
+            "o": "ȏ̈",
             "p": "p̑̈",
             "q": "q̑̈",
-            "r": "ȓ̈",
+            "r": "ȓ̈",
             "s": "s̑̈",
             "t": "t̑̈",
-            "u": "ȗ̈",
+            "u": "ȗ̈",
             "v": "v̑̈",
             "w": "w̑̈",
             "x": "x̑̈",
             "y": "y̑̈",
             "z": "z̑̈",
-            "A": "Ȃ̈",
+            "A": "Ȃ̈",
             "B": "B̑̈",
             "C": "C̑̈",
             "D": "D̑̈",
-            "E": "Ȇ̈",
+            "E": "Ȇ̈",
             "F": "F̑̈",
             "G": "G̑̈",
             "H": "H̑̈",
-            "I": "Ȋ̈",
+            "I": "Ȋ̈",
             "J": "J̑̈",
             "K": "K̑̈",
             "L": "L̑̈",
             "M": "M̑̈",
             "N": "N̑̈",
-            "O": "Ȏ̈",
+            "O": "Ȏ̈",
             "P": "P̑̈",
             "Q": "Q̑̈",
-            "R": "Ȓ̈",
+            "R": "Ȓ̈",
             "S": "S̑̈",
             "T": "T̑̈",
-            "U": "Ȗ̈",
+            "U": "Ȗ̈",
             "V": "V̑̈",
             "W": "W̑̈",
             "X": "X̑̈",
@@ -1304,65 +1325,67 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def special(text):
         style = {
-            "a": "🇦 ",
-            "b": "🇧 ",
-            "c": "🇨 ",
-            "d": "🇩 ",
-            "e": "🇪 ",
-            "f": "🇫 ",
-            "g": "🇬 ",
-            "h": "🇭 ",
-            "i": "🇮 ",
-            "j": "🇯 ",
-            "k": "🇰 ",
-            "l": "🇱 ",
-            "m": "🇲 ",
-            "n": "🇳 ",
-            "o": "🇴 ",
-            "p": "🇵 ",
-            "q": "🇶 ",
-            "r": "🇷 ",
-            "s": "🇸 ",
-            "t": "🇹 ",
-            "u": "🇺 ",
-            "v": "🇻 ",
-            "w": "🇼 ",
-            "x": "🇽 ",
-            "y": "🇾 ",
-            "z": "🇿 ",
-            "A": "🇦 ",
-            "B": "🇧 ",
-            "C": "🇨 ",
-            "D": "🇩 ",
-            "E": "🇪 ",
-            "F": "🇫 ",
-            "G": "🇬 ",
-            "H": "🇭 ",
-            "I": "🇮 ",
-            "J": "🇯 ",
-            "K": "🇰 ",
-            "L": "🇱 ",
-            "M": "🇲 ",
-            "N": "🇳 ",
-            "O": "🇴 ",
-            "P": "🇵 ",
-            "Q": "🇶 ",
-            "R": "🇷 ",
-            "S": "🇸 ",
-            "T": "🇹 ",
-            "U": "🇺 ",
-            "V": "🇻 ",
-            "W": "🇼 ",
-            "X": "🇽 ",
-            "Y": "🇾 ",
-            "Z": "🇿 ",
+            "a": "🇦 ",
+            "b": "🇧 ",
+            "c": "🇨 ",
+            "d": "🇩 ",
+            "e": "🇪 ",
+            "f": "🇫 ",
+            "g": "🇬 ",
+            "h": "🇭 ",
+            "i": "🇮 ",
+            "j": "🇯 ",
+            "k": "🇰 ",
+            "l": "🇱 ",
+            "m": "🇲 ",
+            "n": "🇳 ",
+            "o": "🇴 ",
+            "p": "🇵 ",
+            "q": "🇶 ",
+            "r": "🇷 ",
+            "s": "🇸 ",
+            "t": "🇹 ",
+            "u": "🇺 ",
+            "v": "🇻 ",
+            "w": "🇼 ",
+            "x": "🇽 ",
+            "y": "🇾 ",
+            "z": "🇿 ",
+            "A": "🇦 ",
+            "B": "🇧 ",
+            "C": "🇨 ",
+            "D": "🇩 ",
+            "E": "🇪 ",
+            "F": "🇫 ",
+            "G": "🇬 ",
+            "H": "🇭 ",
+            "I": "🇮 ",
+            "J": "🇯 ",
+            "K": "🇰 ",
+            "L": "🇱 ",
+            "M": "🇲 ",
+            "N": "🇳 ",
+            "O": "🇴 ",
+            "P": "🇵 ",
+            "Q": "🇶 ",
+            "R": "🇷 ",
+            "S": "🇸 ",
+            "T": "🇹 ",
+            "U": "🇺 ",
+            "V": "🇻 ",
+            "W": "🇼 ",
+            "X": "🇽 ",
+            "Y": "🇾 ",
+            "Z": "🇿 ",
         }
         for i, j in style.items():
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def square(text):
         style = {
             "a": "🄰",
@@ -1422,6 +1445,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def dark_square(text):
         style = {
             "a": "🅰︎",
@@ -1481,6 +1505,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def andalucia(text):
         style = {
             "a": "ꪖ",
@@ -1540,6 +1565,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def manga(text):
         style = {
             "a": "卂",
@@ -1599,6 +1625,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def stinky(text):
         style = {
             "a": "a̾",
@@ -1658,65 +1685,67 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def bubbles(text):
         style = {
-            "a": "ḁͦ",
-            "b": "b̥ͦ",
-            "c": "c̥ͦ",
-            "d": "d̥ͦ",
-            "e": "e̥ͦ",
-            "f": "f̥ͦ",
-            "g": "g̥ͦ",
-            "h": "h̥ͦ",
-            "i": "i̥ͦ",
-            "j": "j̥ͦ",
-            "k": "k̥ͦ",
-            "l": "l̥ͦ",
-            "m": "m̥ͦ",
-            "n": "n̥ͦ",
-            "o": "o̥ͦ",
-            "p": "p̥ͦ",
-            "q": "q̥ͦ",
-            "r": "r̥ͦ",
-            "s": "s̥ͦ",
-            "t": "t̥ͦ",
-            "u": "u̥ͦ",
-            "v": "v̥ͦ",
-            "w": "w̥ͦ",
-            "x": "x̥ͦ",
-            "y": "y̥ͦ",
-            "z": "z̥ͦ",
-            "A": "Ḁͦ",
-            "B": "B̥ͦ",
-            "C": "C̥ͦ",
-            "D": "D̥ͦ",
-            "E": "E̥ͦ",
-            "F": "F̥ͦ",
-            "G": "G̥ͦ",
-            "H": "H̥ͦ",
-            "I": "I̥ͦ",
-            "J": "J̥ͦ",
-            "K": "K̥ͦ",
-            "L": "L̥ͦ",
-            "M": "M̥ͦ",
-            "N": "N̥ͦ",
-            "O": "O̥ͦ",
-            "P": "P̥ͦ",
-            "Q": "Q̥ͦ",
-            "R": "R̥ͦ",
-            "S": "S̥ͦ",
-            "T": "T̥ͦ",
-            "U": "U̥ͦ",
-            "V": "V̥ͦ",
-            "W": "W̥ͦ",
-            "X": "X̥ͦ",
-            "Y": "Y̥ͦ",
-            "Z": "Z̥ͦ",
+            "a": "ḁͦ",
+            "b": "b̥ͦ",
+            "c": "c̥ͦ",
+            "d": "d̥ͦ",
+            "e": "e̥ͦ",
+            "f": "f̥ͦ",
+            "g": "g̥ͦ",
+            "h": "h̥ͦ",
+            "i": "i̥ͦ",
+            "j": "j̥ͦ",
+            "k": "k̥ͦ",
+            "l": "l̥ͦ",
+            "m": "m̥ͦ",
+            "n": "n̥ͦ",
+            "o": "o̥ͦ",
+            "p": "p̥ͦ",
+            "q": "q̥ͦ",
+            "r": "r̥ͦ",
+            "s": "s̥ͦ",
+            "t": "t̥ͦ",
+            "u": "u̥ͦ",
+            "v": "v̥ͦ",
+            "w": "w̥ͦ",
+            "x": "x̥ͦ",
+            "y": "y̥ͦ",
+            "z": "z̥ͦ",
+            "A": "Ḁͦ",
+            "B": "B̥ͦ",
+            "C": "C̥ͦ",
+            "D": "D̥ͦ",
+            "E": "E̥ͦ",
+            "F": "F̥ͦ",
+            "G": "G̥ͦ",
+            "H": "H̥ͦ",
+            "I": "I̥ͦ",
+            "J": "J̥ͦ",
+            "K": "K̥ͦ",
+            "L": "L̥ͦ",
+            "M": "M̥ͦ",
+            "N": "N̥ͦ",
+            "O": "O̥ͦ",
+            "P": "P̥ͦ",
+            "Q": "Q̥ͦ",
+            "R": "R̥ͦ",
+            "S": "S̥ͦ",
+            "T": "T̥ͦ",
+            "U": "U̥ͦ",
+            "V": "V̥ͦ",
+            "W": "W̥ͦ",
+            "X": "X̥ͦ",
+            "Y": "Y̥ͦ",
+            "Z": "Z̥ͦ",
         }
         for i, j in style.items():
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def underline(text):
         style = {
             "a": "a͟",
@@ -1776,6 +1805,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def ladybug(text):
         style = {
             "a": "ꍏ",
@@ -1835,6 +1865,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def rays(text):
         style = {
             "a": "a҉",
@@ -1894,6 +1925,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def birds(text):
         style = {
             "a": "a҈",
@@ -1953,6 +1985,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def slash(text):
         style = {
             "a": "a̸",
@@ -2012,6 +2045,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def stop(text):
         style = {
             "a": "a⃠",
@@ -2071,65 +2105,67 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def skyline(text):
         style = {
-            "a": "a̺͆",
-            "b": "b̺͆",
-            "c": "c̺͆",
-            "d": "d̺͆",
-            "e": "e̺͆",
-            "f": "f̺͆",
-            "g": "g̺͆",
-            "h": "h̺͆",
-            "i": "i̺͆",
-            "j": "j̺͆",
-            "k": "k̺͆",
-            "l": "l̺͆",
-            "m": "m̺͆",
-            "n": "n̺͆",
-            "o": "o̺͆",
-            "p": "p̺͆",
-            "q": "q̺͆",
-            "r": "r̺͆",
-            "s": "s̺͆",
-            "t": "t̺͆",
-            "u": "u̺͆",
-            "v": "v̺͆",
-            "w": "w̺͆",
-            "x": "x̺͆",
-            "y": "y̺͆",
-            "z": "z̺͆",
-            "A": "A̺͆",
-            "B": "B̺͆",
-            "C": "C̺͆",
-            "D": "D̺͆",
-            "E": "E̺͆",
-            "F": "F̺͆",
-            "G": "G̺͆",
-            "H": "H̺͆",
-            "I": "I̺͆",
-            "J": "J̺͆",
-            "K": "K̺͆",
-            "L": "L̺͆",
-            "M": "M̺͆",
-            "N": "N̺͆",
-            "O": "O̺͆",
-            "P": "P̺͆",
-            "Q": "Q̺͆",
-            "R": "R̺͆",
-            "S": "S̺͆",
-            "T": "T̺͆",
-            "U": "U̺͆",
-            "V": "V̺͆",
-            "W": "W̺͆",
-            "X": "X̺͆",
-            "Y": "Y̺͆",
-            "Z": "Z̺͆",
+            "a": "a̺͆",
+            "b": "b̺͆",
+            "c": "c̺͆",
+            "d": "d̺͆",
+            "e": "e̺͆",
+            "f": "f̺͆",
+            "g": "g̺͆",
+            "h": "h̺͆",
+            "i": "i̺͆",
+            "j": "j̺͆",
+            "k": "k̺͆",
+            "l": "l̺͆",
+            "m": "m̺͆",
+            "n": "n̺͆",
+            "o": "o̺͆",
+            "p": "p̺͆",
+            "q": "q̺͆",
+            "r": "r̺͆",
+            "s": "s̺͆",
+            "t": "t̺͆",
+            "u": "u̺͆",
+            "v": "v̺͆",
+            "w": "w̺͆",
+            "x": "x̺͆",
+            "y": "y̺͆",
+            "z": "z̺͆",
+            "A": "A̺͆",
+            "B": "B̺͆",
+            "C": "C̺͆",
+            "D": "D̺͆",
+            "E": "E̺͆",
+            "F": "F̺͆",
+            "G": "G̺͆",
+            "H": "H̺͆",
+            "I": "I̺͆",
+            "J": "J̺͆",
+            "K": "K̺͆",
+            "L": "L̺͆",
+            "M": "M̺͆",
+            "N": "N̺͆",
+            "O": "O̺͆",
+            "P": "P̺͆",
+            "Q": "Q̺͆",
+            "R": "R̺͆",
+            "S": "S̺͆",
+            "T": "T̺͆",
+            "U": "U̺͆",
+            "V": "V̺͆",
+            "W": "W̺͆",
+            "X": "X̺͆",
+            "Y": "Y̺͆",
+            "Z": "Z̺͆",
         }
         for i, j in style.items():
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def arrows(text):
         style = {
             "a": "a͎",
@@ -2189,6 +2225,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def rvnes(text):
         style = {
             "a": "ል",
@@ -2212,7 +2249,7 @@ class Fonts:
             "s": "ነ",
             "t": "ፕ",
             "u": "ሁ",
-            "v": "ሀ",
+            "v": "��",
             "w": "ሠ",
             "x": "ሸ",
             "y": "ሃ",
@@ -2248,6 +2285,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def strike(text):
         style = {
             "a": "a̶",
@@ -2307,6 +2345,7 @@ class Fonts:
             text = text.replace(i, j)
         return text
 
+    @staticmethod
     def frozen(text):
         style = {
             "a": "a༙",
@@ -2401,9 +2440,9 @@ async def style_buttons(c, m, cb=False):
             InlineKeyboardButton("𝕲𝖔𝖙𝖍𝖎𝖈", callback_data="style+gothic_bolt"),
         ],
         [
-            InlineKeyboardButton("C͜͡l͜͡o͜͡u͜͡d͜͡s͜͡", callback_data="style+cloud"),
-            InlineKeyboardButton("H̆̈ă̈p̆̈p̆̈y̆̈", callback_data="style+happy"),
-            InlineKeyboardButton("S̑̈ȃ̈d̑̈", callback_data="style+sad"),
+            InlineKeyboardButton("C͜͡l͜͡o͜͡u͜͡d͜͡s͜͡", callback_data="style+cloud"),
+            InlineKeyboardButton("H̆̈ă̈p̆̈p̆̈y̆̈", callback_data="style+happy"),
+            InlineKeyboardButton("S̑̈ȃ̈d̑̈", callback_data="style+sad"),
         ],
         [InlineKeyboardButton("ɴᴇxᴛ ➻", callback_data="nxt")],
     ]
@@ -2423,7 +2462,7 @@ async def nxt(c, m):
     if m.data == "nxt":
         buttons = [
             [
-                InlineKeyboardButton("🇸 🇵 🇪 🇨 🇮 🇦 🇱 ", callback_data="style+special"),
+                InlineKeyboardButton("🇸 🇵 🇪 🇨 🇮 🇦 🇱 ", callback_data="style+special"),
                 InlineKeyboardButton("🅂🅀🅄🄰🅁🄴🅂", callback_data="style+squares"),
                 InlineKeyboardButton("🆂︎🆀︎🆄︎🅰︎🆁︎🅴︎🆂︎", callback_data="style+squares_bold"),
             ],
@@ -2433,7 +2472,7 @@ async def nxt(c, m):
                 InlineKeyboardButton("S̾t̾i̾n̾k̾y̾", callback_data="style+stinky"),
             ],
             [
-                InlineKeyboardButton("B̥ͦu̥ͦb̥ͦb̥ͦl̥ͦe̥ͦs̥ͦ", callback_data="style+bubbles"),
+                InlineKeyboardButton("B̥ͦu̥ͦb̥ͦb̥ͦl̥ͦe̥ͦs̥ͦ", callback_data="style+bubbles"),
                 InlineKeyboardButton("U͟n͟d͟e͟r͟l͟i͟n͟e͟", callback_data="style+underline"),
                 InlineKeyboardButton("꒒ꍏꀷꌩꌃꀎꁅ", callback_data="style+ladybug"),
             ],
@@ -2444,7 +2483,7 @@ async def nxt(c, m):
             ],
             [
                 InlineKeyboardButton("s⃠t⃠o⃠p⃠", callback_data="style+stop"),
-                InlineKeyboardButton("S̺͆k̺͆y̺͆l̺͆i̺͆n̺͆e̺͆", callback_data="style+skyline"),
+                InlineKeyboardButton("S̺͆k̺͆y̺͆l̺͆i̺͆n̺͆e̺͆", callback_data="style+skyline"),
                 InlineKeyboardButton("A͎r͎r͎o͎w͎s͎", callback_data="style+arrows"),
             ],
             [
