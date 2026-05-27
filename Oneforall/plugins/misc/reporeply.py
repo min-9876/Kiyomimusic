@@ -45,8 +45,8 @@ async def repo_callback(_, query: CallbackQuery):
         [
             [
                 InlineKeyboardButton(
-                    "⦿ ʙᴀᴄᴋ ⦿",
-                    callback_data="help_back"
+                    "<",
+                    callback_data="settings_back_helper"
                 )
             ]
         ]
