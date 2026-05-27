@@ -105,8 +105,10 @@ def group_help_pagination(_, page: int = 0):
         for j in range(3):
             if i + j < len(page_buttons):
                 label, callback = page_buttons[i + j]
+                # Normalize label: extract from list if needed
+                label_key = label[0] if isinstance(label, list) else label
                 # Use label as-is (can be translated via language files if needed)
-                button_text = _[label] if label in _ else label
+                button_text = _[label_key] if label_key in _ else label_key
                 row.append(
                     InlineKeyboardButton(
                         text=button_text,
