@@ -51,11 +51,38 @@ async def helper_private(
 @app.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def help_com_group(client, message: Message, _):
-    keyboard = private_help_panel(_)
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text="📖 Open Here",
+                    callback_data="group_help_display"
+                ),
+                InlineKeyboardButton(
+                    text="💬 Open in DM",
+                    url=f"https://t.me/{app.username}?start=help"
+                ),
+            ],
+        ]
+    )
     await message.reply_video(
         video="https://files.catbox.moe/dfj9zk.mp4",
         caption=_["help_2"],
-        reply_markup=InlineKeyboardMarkup(keyboard),
+        reply_markup=keyboard,
+    )
+
+
+@app.on_callback_query(filters.regex("group_help_display") & ~BANNED_USERS)
+@languageCB
+async def group_help_display(client, CallbackQuery, _):
+    try:
+        await CallbackQuery.answer()
+    except:
+        pass
+    keyboard = help_pannel(_, True)
+    await CallbackQuery.edit_message_text(
+        _["help_1"].format(SUPPORT_CHAT),
+        reply_markup=keyboard,
     )
 
 
