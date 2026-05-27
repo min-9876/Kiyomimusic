@@ -205,7 +205,7 @@ def group_help_pagination(_, page: int = 0):
                 label, callback = page_buttons[i + j]
                 # Check if label is a translation key or plain text
                 if label.startswith("H_B_") or label in ["✨ ғsᴜʙ", "🎮 ғᴜɴ ɢᴀᴍᴇ"]:
-                    button_text = _[label] if label in _else label
+                    button_text = _[label] if label in _ else label
                 else:
                     button_text = label
                 row.append(
